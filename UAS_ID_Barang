@@ -1,0 +1,41 @@
+/*
+
+Nama     : Fatur Rachman Ardiansyah
+NIM      : 04319006
+Prodi    : Teknik Informatika B
+*/
+#include <iostream>
+#include <string>
+using namespace std;
+int main() {
+string brg[3][3] = {{"1","Bumbu","4000"},{"2","Kecap","8000"},{"3","Saus","9000"}};
+int kode_brg;
+int hrg;
+int i;
+int jmlh;
+string nm;
+// ID Barang
+cout << "Nama Item" <<endl;
+cout << "ID 1 : Bumbu" <<endl;
+cout << "ID 2 : Kecap" <<endl;
+cout << "ID 3 : Saus" <<endl;
+// Input ID
+cout << "ID Item : ";
+cin >> kode_brg;
+cout << "Jumlah : ";
+cin >> jmlh;
+//Input Data
+  for (int i = 0;i<5;i++){
+    if (kode_brg==i+1){
+      nm = brg[i][1];
+      hrg = stoi(brg[i][2]);
+      cout << "Beli" << jmlh<<" "<< nm;
+      int total = hrg*jmlh;
+      cout << " Total : Rp." << total;
+      //error ID salah
+    }else if (kode_brg>=4 || kode_brg==0){
+      cout << "Kode Tidak Valid" << endl;
+      break;
+    }
+  }
+}
